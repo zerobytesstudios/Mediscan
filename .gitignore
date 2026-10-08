@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Env / secrets
+.env
+
+# Uploaded files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Node
+node_modules/
+dist/
+
+# Frontend smoke-test screenshots
+frontend/screenshots/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/

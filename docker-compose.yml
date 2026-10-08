@@ -1,0 +1,17 @@
+# Optional convenience: run just the Postgres service used by MEDISCAN AI.
+# Windows service users can ignore this file (PostgreSQL is already running as a service).
+services:
+  db:
+    image: postgres:16
+    container_name: mediscan-db
+    environment:
+      POSTGRES_DB: mediscan_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - mediscan_pgdata:/var/lib/postgresql/data
+
+volumes:
+  mediscan_pgdata:
